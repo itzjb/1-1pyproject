@@ -97,3 +97,30 @@ def delete_task():
 def exit_program():
     # GUI 창 닫기
     root.destroy()
+
+# GUI 설정
+root = tk.Tk()
+root.title("TODO LIST")  # 프로그램 제목 설정
+
+# 버튼을 담을 프레임 생성
+frame = tk.Frame(root)
+frame.pack(pady=20, padx=20)
+
+# 할 일 추가 버튼
+btn_add = tk.Button(frame, text="할 일 추가", command=add_task, width=20)
+btn_add.grid(row=0, column=0, pady=5)
+
+# 할 일 목록 보기 버튼
+btn_view = tk.Button(frame, text="할 일 목록 보기", command=view_tasks, width=20)
+btn_view.grid(row=1, column=0, pady=5)
+
+# 할 일 삭제 버튼
+btn_delete = tk.Button(frame, text="할 일 삭제", command=delete_task, width=20)
+btn_delete.grid(row=2, column=0, pady=5)
+
+# 종료 버튼
+btn_exit = tk.Button(frame, text="종료", command=exit_program, width=20)
+btn_exit.grid(row=3, column=0, pady=5)
+
+# GUI 이벤트 루프 시작
+root.mainloop()
