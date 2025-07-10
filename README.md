@@ -1,2 +1,3 @@
 # 1-1pyproject
-1 / 1 Python Project
+# 프로그래밍 1학년 1학기 파이썬 프로젝트
+# TODO+
